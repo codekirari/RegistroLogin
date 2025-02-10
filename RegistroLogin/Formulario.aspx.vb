@@ -1,6 +1,7 @@
 ﻿Public Class Formulario
     Inherits System.Web.UI.Page
 
+    Dim rl1 As RegistroLogin = New RegistroLogin
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
     End Sub
