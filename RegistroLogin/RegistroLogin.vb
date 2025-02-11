@@ -14,53 +14,53 @@ Public Class RegistroLogin
 
     Dim conexion As String = ConfigurationManager.AppSettings("StringConexion")
     Dim cnn As New SqlConnection(conexion)
-    Private Sub conectar()
+    Private Sub Conectar()
         If cnn.State = ConnectionState.Closed Then
             cnn.Open()
         End If
     End Sub
 
-    Private Sub desconectar()
+    Private Sub Desconectar()
         If cnn.State = ConnectionState.Open Then
             cnn.Close()
         End If
     End Sub
 
-    Function getid() As Integer
+    Function Getid() As Integer
         Return id
     End Function
 
-    Function getnombre() As String
+    Function Getnombre() As String
         Return nombre
     End Function
 
-    Function getapelllido() As String
+    Function Getapelllido() As String
 
         Return apellido
     End Function
 
-    Function getusuario() As String
+    Function Getusuario() As String
         Return usuario
     End Function
 
-    Function getpassword() As String
+    Function Getpassword() As String
         Return password
     End Function
 
-    Sub setnombre(ByVal n As String)
+    Sub Setnombre(ByVal n As String)
         nombre = n
     End Sub
 
-    Sub setapellido(ByVal a As String)
+    Sub Setapellido(ByVal a As String)
         apellido = a
     End Sub
 
-    Sub setusuario(ByVal u As String)
-        getusuario = u
+    Sub Setusuario(ByVal u As String)
+        Getusuario = u
     End Sub
 
-    Sub setpassword(ByVal p As String)
-        setpassword = p
+    Sub Setpassword(ByVal p As String)
+        Setpassword = p
     End Sub
 
    Pubic Sub GuardarRegistro()
